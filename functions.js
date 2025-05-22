@@ -63,6 +63,11 @@ async function getFileHash(fileInputId)
 		alert("Lütfen önce bir dosya seçin!");
 		throw new Error("Dosya seçilmedi!");
 	}
+	else if (file.size == 0)
+	{
+		alert("Dosya boş olamaz!");
+		throw new Error("Dosya boş!");
+	}
 
 	return new Promise((resolve, reject) => 
 	{
